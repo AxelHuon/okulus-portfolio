@@ -1,0 +1,20 @@
+$titles: ("120" : 120, "75" : 75, "43" : 43, "35" : 35, "20" : 20,"27" : 27, "50" : 50);
+$colors: ("primary" : $primary,"secondary" : $secondary, "white" : $white, "black": $black, "secondary-gradient" : $secondary-gradient,"primary-gradient" : $primary-gradient);
+
+
+@each $name, $size in $titles {
+  .text-#{$name} {
+    font-size: #{$size}px ;
+    line-height: calc(#{$size}px + 10px);
+  }
+}
+
+@each $name, $color in $colors {
+  .color-#{$name} {
+    color: $color;
+  }
+}
+
+.regular{
+  font-family: "BrownSugar";
+}
