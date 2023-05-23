@@ -52,6 +52,10 @@ table {
   border-spacing: 0;
 }
 
+@font-face {
+  font-family: "BrownSugar";
+  src: url("../fonts/BrownSugar.ttf") format("truetype");
+}
 .text-200 {
   font-size: 200px;
   line-height: calc(200px + 10px);
