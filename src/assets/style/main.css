@@ -52,6 +52,10 @@ table {
   border-spacing: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 @font-face {
   font-family: "BrownSugar";
   src: url("../fonts/BrownSugar.ttf") format("truetype");
@@ -128,15 +132,16 @@ table {
   font-size: clamp(10vw, 20vw, 200px);
 }
 
-.content-page {
+.page {
   background-color: #EFEFEF;
-  min-height: 100vh;
   width: 100%;
+  height: 200vh;
+  position: relative;
 }
-.content-page::before {
+.page::before {
   content: "";
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   position: absolute;
   left: 0;
   top: 0;
@@ -149,11 +154,60 @@ table {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 99999;
+  z-index: 9998;
 }
 .header-container {
   padding-inline: 50px;
   padding-block: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.header-container-button {
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  position: relative;
+}
+.header-container-button div {
+  width: 10px;
+  height: 10px;
+  border-radius: 8px;
+  position: absolute;
+  background: #0E87D0;
+}
+.header-container-button div:nth-child(1) {
+  left: 0;
+  top: 0;
+}
+.header-container-button div:nth-child(2) {
+  right: 0;
+  bottom: 0;
+}
+
+.loader {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #EFEFEF;
+  transition: top 1s cubic-bezier(0.85, 0, 0.2, 1) 2s, box-shadow cubic-bezier(0.85, 0, 0.2, 1) 2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0px 16px 40px 11px rgba(0, 0, 0, 0.4);
+  gap: 20px;
+}
+.loader img {
+  width: 200px;
+  height: auto;
+}
+
+.js-loading-state.is-loaded .loader {
+  box-shadow: 0px 16px 40px 11px rgba(0, 0, 0, 0);
+  top: -100%;
 }
 
 .home-hero {
@@ -163,7 +217,6 @@ table {
 .home-hero::before {
   content: "";
   width: 100%;
-  height: 100vh;
   filter: blur(20px);
   position: absolute;
   left: 0;
@@ -201,6 +254,17 @@ table {
   z-index: 998;
   mix-blend-mode: difference;
   pointer-events: none;
+}
+.home-hero-container-background {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 70vw;
+  height: 100vh;
+  background: #BDE6FF;
+  filter: blur(200px);
+  opacity: 0.3;
 }
 
 @keyframes animationOpacityGradient {

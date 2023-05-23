@@ -1,13 +1,17 @@
+import {useRef} from "react";
+import {Expo} from "gsap/gsap-core";
+import gsap from "gsap"
+import {Link} from "react-router-dom";
 
 const Header = () => {
+	
+	
+ 
+	
 	return (
 		<header className={"header"}>
 			<aside className={"header-container"}>
-				<div className={"header-container-logo"}><p className={"color-primary regular text-30"}>OKLS</p></div>
-				<div className={"header-container-button"}>
-					<div></div>
-					<div></div>
-				</div>
+				<div className={"header-container-logo"}><Link to={"/"} className={"color-primary regular text-30"}>OKULUS</Link></div>
 			</aside>
 		</header>
 	);

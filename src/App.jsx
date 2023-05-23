@@ -1,15 +1,25 @@
-import "./assets/style/main.css"
-import Header from "./layouts/Header.jsx";
-import Router from "./router/Router.jsx";
+import Router from "./router/Router";
+import "./assets/style/main.css";
+import {Component} from "react";
 
-function App() {
-
-  return (
-    <div className={"content-page"}>
-      <Header/>
-      <Router/>
-    </div>
-  )
+class App extends Component {
+    
+    componentDidMount() {
+        window.scrollTo(0, 0);
+    }
+    
+    render() {
+        return (
+            <>
+                <div className={"loader"}>
+                
+                </div>
+                <div className="page">
+                    <Router/>
+                </div>
+            </>
+        );
+    }
 }
 
-export default App
+export default App;
