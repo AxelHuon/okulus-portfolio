@@ -35,13 +35,11 @@
     }
     h2{
       position: absolute;
-      top: 140px;
+      top: 15vh;
       z-index: 998;
       mix-blend-mode: difference;
       pointer-events: none;
-      @media (max-width: 991px){
-        top: 190px;
-      }
+
     }
   }
 }
