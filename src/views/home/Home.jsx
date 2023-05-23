@@ -1,4 +1,5 @@
 import HomeHero from "./Partials/HomeHero.jsx";
+import HomeAbout from "./Partials/HomeAbout.jsx";
 
 const Home = () => {
 	
@@ -6,6 +7,7 @@ const Home = () => {
 	return (
 	<>
 		<HomeHero/>
+		<HomeAbout/>
 	</>
 	);
 };

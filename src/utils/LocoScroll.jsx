@@ -33,6 +33,7 @@ const LocoScroll = ({ direction, innerRef, children }) => {
 					breakpoint: 0,
 					smooth: true,
 				},
+				repeat:true,
 			}}
 			watch={[]}
 			containerRef={innerRef}

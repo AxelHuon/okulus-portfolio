@@ -11,7 +11,7 @@ const Header = () => {
 	return (
 		<header className={"header"}>
 			<aside className={"header-container"}>
-				<div className={"header-container-logo"}><Link to={"/"} className={"color-primary regular text-30"}>OKULUS</Link></div>
+				<div className={"header-container-logo"}><Link to={"/"} className={"color-secondary-gradient regular text-30"}>OKULUS</Link></div>
 			</aside>
 		</header>
 	);
