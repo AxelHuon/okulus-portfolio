@@ -19,13 +19,19 @@
     align-items: center;
     flex-direction: column;
     position: relative;
+    padding-inline: 5%;
+    box-sizing: border-box;
     img{
       width: 500px;
+      max-width: 500px;
       z-index: 998;
       mix-blend-mode: difference;
       filter: blur(20px);
       transform: scale(0.8);
       opacity: 0;
+      @media (max-width: 991px){
+        max-width: 400px;
+      }
     }
     h2{
       position: absolute;
@@ -33,6 +39,9 @@
       z-index: 998;
       mix-blend-mode: difference;
       pointer-events: none;
+      @media (max-width: 991px){
+        top: 190px;
+      }
     }
   }
 }

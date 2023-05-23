@@ -18,3 +18,8 @@ $colors: ("primary" : $primary,"secondary" : $secondary, "white" : $white, "blac
 .regular{
   font-family: "BrownSugar";
 }
+
+
+.text-200{
+  font-size: clamp(10vw,20vw,200px);
+}

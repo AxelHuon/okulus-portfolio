@@ -120,6 +120,10 @@ table {
   font-family: "BrownSugar";
 }
 
+.text-200 {
+  font-size: clamp(10vw, 20vw, 200px);
+}
+
 .content-page {
   background-color: #EFEFEF;
   min-height: 100vh;
@@ -170,14 +174,22 @@ table {
   align-items: center;
   flex-direction: column;
   position: relative;
+  padding-inline: 5%;
+  box-sizing: border-box;
 }
 .home-hero-container img {
   width: 500px;
+  max-width: 500px;
   z-index: 998;
   mix-blend-mode: difference;
   filter: blur(20px);
   transform: scale(0.8);
   opacity: 0;
+}
+@media (max-width: 991px) {
+  .home-hero-container img {
+    max-width: 400px;
+  }
 }
 .home-hero-container h2 {
   position: absolute;
@@ -185,6 +197,11 @@ table {
   z-index: 998;
   mix-blend-mode: difference;
   pointer-events: none;
+}
+@media (max-width: 991px) {
+  .home-hero-container h2 {
+    top: 190px;
+  }
 }
 
 @keyframes animationOpacityGradient {
