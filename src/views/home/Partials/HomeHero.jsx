@@ -28,9 +28,9 @@ const HomeHero = () => {
 	});
 	
 	
-	return (<div data-scroll data-scroll-section className={"home-hero"}>
+	return (<section data-scroll data-scroll-section className={"home-hero"}>
 			<div className={"home-hero-container"}>
-				<h2 className={"text-200 regular color-primary"}>
+				<h2 data-scroll data-scroll-speed={"-2"} className={"text-200 regular color-primary"}>
 					<Tween playState={statePlay} from={{x: '-100px', opacity: "0", rotate: 20}} to={{x: '0', opacity: "100%", rotate: 0}} ease="expo.in()" duration={1.4} stagger={0.15}>
 						<SplitChars
 							wrapper={<span/>}
@@ -43,7 +43,7 @@ const HomeHero = () => {
 					<img ref={imgRef} src={"/images/332172514_970661424301110_3590082735548445311_n.webp"}/>
 				</ReactParallaxTilt>
 			</div>
-		</div>);
+		</section>);
 };
 
 export default HomeHero;
