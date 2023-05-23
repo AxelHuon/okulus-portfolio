@@ -7,12 +7,12 @@ import Header from "../layouts/Header";
 
 const Router = () => {
 	
-	const ref = useRef(null);
+	const ref = useRef();
 	const location = useLocation();
 	
 	return (
 		<LocoScroll innerRef={ref} direction="vertical">
-			<div data-scroll-container ref={ref}>
+			<div data-scroll data-scroll-container ref={ref}>
 				<Header />
 				<Routes>
 					<Route path="/" element={<Home />} />
