@@ -1,0 +1,18 @@
+.home-gallery {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  &-container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+
+    h2 {
+      pointer-events: none;
+    }
+  }
+}

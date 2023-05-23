@@ -1,13 +1,13 @@
-import HomeHero from "./Partials/HomeHero.jsx";
+import HomeGallery from './Partials/HomeGallery.jsx';
+import HomeHero from './Partials/HomeHero.jsx';
 
 const Home = () => {
-	
-	
-	return (
-	<>
-		<HomeHero/>
-	</>
-	);
+  return (
+    <>
+      <HomeHero />
+      <HomeGallery />
+    </>
+  );
 };
 
 export default Home;

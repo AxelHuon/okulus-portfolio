@@ -219,7 +219,7 @@ html.has-scroll-dragging {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: rgb(255, 255, 255);
+  background-color: white;
   opacity: 0.5;
   width: 7px;
   border-radius: 10px;
@@ -367,6 +367,23 @@ html.has-scroll-dragging {
   100% {
     opacity: 0.3;
   }
+}
+.home-gallery {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+.home-gallery-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  text-align: center;
+}
+.home-gallery-container h2 {
+  pointer-events: none;
 }
 
 /*# sourceMappingURL=main.css.map */
