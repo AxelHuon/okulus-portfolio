@@ -3,6 +3,7 @@ import {useEffect, useRef, useState} from "react";
 import gsap from "gsap"
 import {Expo} from "gsap/gsap-core";
 import {SplitChars, Tween} from "react-gsap";
+import {Link} from "react-router-dom";
 
 const HomeHero = () => {
 	
@@ -24,7 +25,7 @@ const HomeHero = () => {
 	
 	
 	useEffect(() => {
-		gsap.to(imgRef.current, {opacity: 1, transition: 1.4, filter: "blur(0px)", scale: 1, ease: Expo.easeIn,delay: 2});
+		gsap.to(imgRef.current, {opacity: 1, transition: 1.4, filter: "blur(0px)", scale: 1, ease: Expo.easeIn,delay: 1});
 	});
 	
 	
@@ -39,9 +40,11 @@ const HomeHero = () => {
 						</SplitChars>
 					</Tween>
 				</h2>
-				<ReactParallaxTilt style={style} reset={true} tiltReverse={true} glareEnable={true} glareReverse={true} glareColor={"#FFF9F0"} scale={1.02} transitionEasing={"cubic-bezier(.03,.98,.52,.99)"} tiltMaxAngleX={10} tiltMaxAngleY={10}>
-					<img ref={imgRef} src={"/images/332172514_970661424301110_3590082735548445311_n.webp"}/>
-				</ReactParallaxTilt>
+					<div className={"home-hero-container-image"}>
+					<ReactParallaxTilt data-scroll data-scroll-speed={"4"} style={style} reset={true} tiltReverse={true} glareEnable={true} glareReverse={true} glareColor={"#FFF9F0"} scale={1.02} transitionEasing={"cubic-bezier(.03,.98,.52,.99)"} tiltMaxAngleX={10} tiltMaxAngleY={10}>
+							<img ref={imgRef} src={"/images/332172514_970661424301110_3590082735548445311_n.webp"}/>
+						</ReactParallaxTilt>
+					</div>
 			</div>
 		</section>);
 };

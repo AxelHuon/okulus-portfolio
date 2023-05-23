@@ -23,3 +23,12 @@ $colors: ("primary" : $primary,"secondary" : $secondary, "white" : $white, "blac
 .text-200{
   font-size: clamp(10vw,20vw,200px);
 }
+
+.text-100{
+  font-size: clamp(5vw,100px,120px);
+}
+
+
+.paragraph{
+  font-family: "Satoshi Regular";
+}

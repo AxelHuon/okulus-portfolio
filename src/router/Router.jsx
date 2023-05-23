@@ -15,7 +15,7 @@ const Router = () => {
 			<div data-scroll data-scroll-container ref={ref}>
 				<Header />
 				<Routes>
-					<Route path="/" element={<Home />} />
+					<Route path="/" element={<Home  />} />
 				</Routes>
 			</div>
 		</LocoScroll>

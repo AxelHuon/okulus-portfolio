@@ -9,6 +9,9 @@
     padding-block: 20px;
     display: flex;
     justify-content: space-between;
+    a{
+      mix-blend-mode: difference;
+    }
     &-button{
       height: 30px;
       width: 30px;
