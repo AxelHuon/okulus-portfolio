@@ -402,21 +402,11 @@ html.has-scroll-dragging {
   pointer-events: none;
 }
 .home-gallery-container-images {
-  margin-top: 50px;
+  margin-top: 70px;
   position: relative;
   width: calc(100% - 204px);
   height: 100%;
   margin: auto;
-  gap: 20px;
-  /*       &-item {
-    position: absolute;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  } */
 }
 .home-gallery-container-images-item {
   transform: scale(0.6);
@@ -432,6 +422,16 @@ html.has-scroll-dragging {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 1s;
+}
+.home-gallery-container-images-item:nth-of-type(1) img:first-child {
+  opacity: 1;
+}
+.home-gallery-container-images-item:nth-of-type(1) img:last-child {
+  opacity: 0;
 }
 .home-gallery-container-images-item:nth-of-type(2) {
   position: absolute;
@@ -444,6 +444,16 @@ html.has-scroll-dragging {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 1s;
+}
+.home-gallery-container-images-item:nth-of-type(2) img:first-child {
+  opacity: 1;
+}
+.home-gallery-container-images-item:nth-of-type(2) img:last-child {
+  opacity: 0;
 }
 .home-gallery-container-images-item:nth-of-type(3) {
   position: absolute;
@@ -456,6 +466,16 @@ html.has-scroll-dragging {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 1s;
+}
+.home-gallery-container-images-item:nth-of-type(3) img:first-child {
+  opacity: 1;
+}
+.home-gallery-container-images-item:nth-of-type(3) img:last-child {
+  opacity: 0;
 }
 .home-gallery-container-images-item:nth-of-type(4) {
   position: absolute;
@@ -468,6 +488,16 @@ html.has-scroll-dragging {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 1s;
+}
+.home-gallery-container-images-item:nth-of-type(4) img:first-child {
+  opacity: 1;
+}
+.home-gallery-container-images-item:nth-of-type(4) img:last-child {
+  opacity: 0;
 }
 .home-gallery-container-images-item:nth-of-type(5) {
   position: absolute;
@@ -480,6 +510,16 @@ html.has-scroll-dragging {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 1s;
+}
+.home-gallery-container-images-item:nth-of-type(5) img:first-child {
+  opacity: 1;
+}
+.home-gallery-container-images-item:nth-of-type(5) img:last-child {
+  opacity: 0;
 }
 .home-gallery-container-images-item:nth-of-type(6) {
   position: absolute;
@@ -492,6 +532,16 @@ html.has-scroll-dragging {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 1s;
+}
+.home-gallery-container-images-item:nth-of-type(6) img:first-child {
+  opacity: 1;
+}
+.home-gallery-container-images-item:nth-of-type(6) img:last-child {
+  opacity: 0;
 }
 .home-gallery-container-images-item:nth-of-type(7) {
   position: absolute;
@@ -504,6 +554,16 @@ html.has-scroll-dragging {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 1s;
+}
+.home-gallery-container-images-item:nth-of-type(7) img:first-child {
+  opacity: 1;
+}
+.home-gallery-container-images-item:nth-of-type(7) img:last-child {
+  opacity: 0;
 }
 
 .home-about {
