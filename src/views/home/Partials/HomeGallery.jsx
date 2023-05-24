@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { Tween, Reveal } from 'react-gsap';
-import { CSSPlugin } from 'gsap/CSSPlugin';
 
 function GalleryItem({ img1, img2, scrollSpeed, intervalTime }) {
   const [flip, setFlip] = useState(false);
@@ -19,8 +18,18 @@ function GalleryItem({ img1, img2, scrollSpeed, intervalTime }) {
       data-scroll-speed={scrollSpeed}
       className="home-gallery-container-images-item"
     >
-      <img src={img1} alt={'gallery'} style={{ opacity: flip ? 0 : 1 }} />
-      <img src={img2} alt={'gallery'} style={{ opacity: flip ? 1 : 0 }} />
+      <img
+        src={img1}
+        alt={'gallery'}
+        style={{ opacity: flip ? 0 : 1 }}
+        draggable={false}
+      />
+      <img
+        src={img2}
+        alt={'gallery'}
+        style={{ opacity: flip ? 1 : 0 }}
+        draggable={false}
+      />
     </div>
   );
 }
@@ -33,7 +42,7 @@ const HomeGallery = () => {
           <Tween
             from={{ opacity: 0, filter: 'blur(10px)' }}
             to={{ opacity: 1, filter: 'blur(0px)' }}
-            duration={2}
+            duration={0.9}
           >
             <h2 className={'text-120 regular black'}>Gallery</h2>
           </Tween>
