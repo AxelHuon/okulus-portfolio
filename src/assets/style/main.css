@@ -104,6 +104,11 @@ a {
   line-height: calc(50px + 10px);
 }
 
+.text-16 {
+  font-size: 16px;
+  line-height: calc(16px + 10px);
+}
+
 .color-primary {
   color: #0E87D0;
 }
@@ -126,6 +131,10 @@ a {
 
 .color-primary-gradient {
   color: #BDE6FF;
+}
+
+.color-green {
+  color: #ADFF2F;
 }
 
 .regular {
@@ -266,26 +275,12 @@ html.has-scroll-dragging {
 .header-container a {
   mix-blend-mode: difference;
 }
-.header-container-button {
-  height: 30px;
-  width: 30px;
+.header-container-menu {
+  display: flex;
+  gap: 20px;
+}
+.header-container-menu li {
   cursor: pointer;
-  position: relative;
-}
-.header-container-button div {
-  width: 10px;
-  height: 10px;
-  border-radius: 8px;
-  position: absolute;
-  background: #0E87D0;
-}
-.header-container-button div:nth-child(1) {
-  left: 0;
-  top: 0;
-}
-.header-container-button div:nth-child(2) {
-  right: 0;
-  bottom: 0;
 }
 
 .loader {
@@ -359,6 +354,7 @@ html.has-scroll-dragging {
   z-index: 998;
   mix-blend-mode: difference;
   pointer-events: none;
+  filter: blur(20px);
 }
 .home-hero-container-background {
   position: absolute;
@@ -409,6 +405,7 @@ html.has-scroll-dragging {
   align-items: center;
   justify-content: center;
   transition: background-color 1s cubic-bezier(0.85, 0, 0.2, 1);
+  overflow: hidden;
 }
 .home-about.is-inview {
   background-color: #1C1C1C;
@@ -429,6 +426,41 @@ html.has-scroll-dragging {
   top: 0;
   opacity: 0;
 }
+.home-about-social {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.home-about-social-item {
+  position: absolute;
+  cursor: pointer;
+}
+.home-about-social-item.instagram {
+  left: 20%;
+  top: 5%;
+  transform: rotate(20deg);
+}
+.home-about-social-item.twitter {
+  left: 20%;
+  top: 5%;
+  transform: rotate(20deg);
+}
+.home-about-social-item-container {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 10px;
+  gap: 40px;
+  padding: 1em 1em;
+  background: #1C1C1C;
+}
+.home-about-social-item-container p {
+  line-height: 20px;
+}
+.home-about-social-item-container img {
+  width: 50px;
+}
 .home-about-container {
   display: flex;
   align-items: center;
@@ -436,6 +468,7 @@ html.has-scroll-dragging {
   padding-inline: 5%;
   z-index: 9999;
   gap: 30px;
+  position: relative;
 }
 .home-about-container-image {
   width: 50%;
