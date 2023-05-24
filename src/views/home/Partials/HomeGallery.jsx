@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import { Tween, Reveal } from 'react-gsap';
+import { CSSPlugin } from 'gsap/CSSPlugin';
 
 function GalleryItem({ img1, img2, scrollSpeed, intervalTime }) {
   const [flip, setFlip] = useState(false);
@@ -24,20 +26,18 @@ function GalleryItem({ img1, img2, scrollSpeed, intervalTime }) {
 }
 
 const HomeGallery = () => {
-  const [flip, setFlip] = useState(false);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setFlip((prev) => !prev);
-    }, 5000); // Change images every 5 seconds
-
-    return () => clearInterval(timer);
-  }, []);
-
   return (
     <section data-scroll data-scroll-section className={'home-gallery'}>
       <div className={'home-gallery-container'}>
-        <h2 className={'text-120 regular black'}>Gallery</h2>
+        <Reveal repeat>
+          <Tween
+            from={{ opacity: 0, filter: 'blur(10px)' }}
+            to={{ opacity: 1, filter: 'blur(0px)' }}
+            duration={2}
+          >
+            <h2 className={'text-120 regular black'}>Gallery</h2>
+          </Tween>
+        </Reveal>
 
         <div className={'home-gallery-container-images'}>
           <GalleryItem

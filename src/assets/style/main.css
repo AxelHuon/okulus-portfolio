@@ -387,7 +387,7 @@ html.has-scroll-dragging {
   width: 100vw;
   height: 400vh;
   position: relative;
-  margin-top: 50px;
+  padding-top: 150px;
 }
 .home-gallery-container {
   height: 100%;
@@ -402,11 +402,12 @@ html.has-scroll-dragging {
   pointer-events: none;
 }
 .home-gallery-container-images {
-  margin-top: 70px;
+  margin-top: 120px;
   position: relative;
   width: calc(100% - 204px);
   height: 100%;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 .home-gallery-container-images-item {
   transform: scale(0.6);

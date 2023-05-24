@@ -2,7 +2,7 @@
   width: 100vw;
   height: 400vh;
   position: relative;
-  margin-top: 50px;
+  padding-top: 150px;
   &-container {
     height: 100%;
     display: flex;
@@ -17,12 +17,13 @@
     }
 
     &-images {
-      margin-top: 70px;
+      margin-top: 120px;
       position: relative;
       width: calc(100% - 204px);
       height: 100%;
 
-      margin: auto;
+      margin-left: auto;
+      margin-right: auto;
 
       &-item {
         transform: scale(0.6);
