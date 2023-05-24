@@ -27,7 +27,7 @@ function GalleryItem({ img1, img2, scrollSpeed, intervalTime }) {
 
 const HomeGallery = () => {
   return (
-    <section data-scroll data-scroll-section className={'home-gallery'}>
+    <section id={"gallery"} data-scroll data-scroll-section className={'home-gallery'}>
       <div className={'home-gallery-container'}>
         <Reveal repeat>
           <Tween

@@ -1,9 +1,10 @@
 import {SplitChars, Tween, Reveal} from "react-gsap";
 import {useEffect, useState} from "react";
+import {useLocomotiveScroll} from "react-locomotive-scroll";
 
 const HomeAbout = () => {
 	
-	
+	const {scroll} = useLocomotiveScroll()
 	const [playState, setPlayState] = useState("stop");
 	let element = document.querySelector(".home-about");
 
@@ -23,7 +24,9 @@ const HomeAbout = () => {
 // Exécution de la fonction toutes les secondes
 	setInterval(checkClass, 1000);
 	
-	
+	const [dragDropState, setDragDropState] = useState(false);
+	const [mousePosition, setMousePosition] = useState({x:0,y:0});
+	const [elementToMove, setElementToMove] = useState("");
 	
 	useEffect(() => {
 		function handleMouseMove(event) {
@@ -37,15 +40,42 @@ const HomeAbout = () => {
 	}, [])
 	
 	
+	const dragDrop = (element) => {
+		scroll.scrollTo("#about")
+		if (!dragDropState){
+			setDragDropState(true)
+			setElementToMove(element)
+		}else{
+			setDragDropState(false)
+		}
+	}
+	
+	useEffect(() => {
+		if (dragDropState){
+			console.log(`.home-about-social-item${elementToMove}`)
+			let divelementToMove = document.querySelector(`.home-about-social-item.${elementToMove}`)
+			divelementToMove.style.left = `${mousePosition.x}px`
+			divelementToMove.style.top =`${mousePosition.y}px`
+			divelementToMove.classList.add("drag")
+		}else{
+			let allElement = document.querySelectorAll(`.home-about-social-item`)
+			for(let i = 0; i<allElement.length; i++){
+				allElement[i].classList.remove("drag")
+			}
+		}
+	}, [mousePosition,dragDropState]);
+	
+	
+	
 	return (<section id={"about"} data-scroll data-scroll-section data-scroll-offset={"300"} className={"home-about"}>
 			<div onClick={(e)=>dragDrop("instagram")} className={"home-about-social-item instagram"}>
 				<img src={"images/instagram.svg"}/>
 				<p className={"color-green text-30 regular"}>@balcokulus</p>
 			</div>
-			<div className={"home-about-social-item twitter"}>
-				<img src={"images/twitter.svg"}/>
-				<p className={"color-green text-30 regular"}>@OkulusL</p>
-			</div>
+		<div onClick={(e)=>dragDrop("twitter")} className={"home-about-social-item twitter"}>
+			<img src={"images/twitter.svg"}/>
+			<p className={"color-green text-30 regular"}>@balcokulus</p>
+		</div>
 		<div className={"home-about-container"}>
 			<div className={"home-about-container-text"}>
 				<h3 data-scroll data-scroll-speed={"2"} data-scroll-offset={"200"} data-scroll-direction={"horizontal"}
@@ -53,7 +83,7 @@ const HomeAbout = () => {
 					<Tween playState={playState} from={{y: '100px', opacity: "0", rotate: 20}}
 						   to={{y: '0', opacity: "100%", rotate: 0}}
 						   ease="expo.out()"
-						   duration={2.3} stagger={0.15}>
+						   duration={3} stagger={0.15}>
 						<SplitChars
 							wrapper={<span style={{display: 'inline-block'}}/>}
 						>
