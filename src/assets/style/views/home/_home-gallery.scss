@@ -2,7 +2,7 @@
   width: 100vw;
   height: 400vh;
   position: relative;
-  margin-top: 50px;
+  padding-top: 150px;
   &-container {
     height: 100%;
     display: flex;
@@ -17,24 +17,13 @@
     }
 
     &-images {
-      margin-top: 50px;
+      margin-top: 120px;
       position: relative;
       width: calc(100% - 204px);
       height: 100%;
 
-      margin: auto;
-
-      gap: 20px;
-
-      /*       &-item {
-        position: absolute;
-
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
-      } */
+      margin-left: auto;
+      margin-right: auto;
 
       &-item {
         transform: scale(0.6);
@@ -53,6 +42,18 @@
           width: 100%;
           height: 100%;
           object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+          transition: opacity 1s;
+        }
+
+        img:first-child {
+          opacity: 1;
+        }
+
+        img:last-child {
+          opacity: 0;
         }
       }
 
@@ -69,6 +70,18 @@
           width: 100%;
           height: 100%;
           object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+          transition: opacity 1s;
+        }
+
+        img:first-child {
+          opacity: 1;
+        }
+
+        img:last-child {
+          opacity: 0;
         }
       }
 
@@ -85,6 +98,18 @@
           width: 100%;
           height: 100%;
           object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+          transition: opacity 1s;
+        }
+
+        img:first-child {
+          opacity: 1;
+        }
+
+        img:last-child {
+          opacity: 0;
         }
       }
 
@@ -101,6 +126,18 @@
           width: 100%;
           height: 100%;
           object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+          transition: opacity 1s;
+        }
+
+        img:first-child {
+          opacity: 1;
+        }
+
+        img:last-child {
+          opacity: 0;
         }
       }
 
@@ -117,6 +154,18 @@
           width: 100%;
           height: 100%;
           object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+          transition: opacity 1s;
+        }
+
+        img:first-child {
+          opacity: 1;
+        }
+
+        img:last-child {
+          opacity: 0;
         }
       }
 
@@ -133,6 +182,18 @@
           width: 100%;
           height: 100%;
           object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+          transition: opacity 1s;
+        }
+
+        img:first-child {
+          opacity: 1;
+        }
+
+        img:last-child {
+          opacity: 0;
         }
       }
 
@@ -149,6 +210,18 @@
           width: 100%;
           height: 100%;
           object-fit: cover;
+          position: absolute;
+          top: 0;
+          left: 0;
+          transition: opacity 1s;
+        }
+
+        img:first-child {
+          opacity: 1;
+        }
+
+        img:last-child {
+          opacity: 0;
         }
       }
     }
