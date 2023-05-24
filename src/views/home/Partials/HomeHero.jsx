@@ -13,6 +13,7 @@ const HomeHero = () => {
 	}
 	
 	const imgRef = useRef();
+	const textRefIntro = useRef();
 	
 	
 	const [statePlay, setStatePlay] = useState("stop");
@@ -20,21 +21,33 @@ const HomeHero = () => {
 	useEffect(() => {
 		setTimeout(()=>{
 			setStatePlay("play")
-		},2000)
+		},2500)
 	}, []);
 	
 	
 	useEffect(() => {
 		gsap.to(imgRef.current, {opacity: 1, transition: 1.4, filter: "blur(0px)", scale: 1, ease: Expo.easeIn,delay: 1});
+		gsap.to(textRefIntro.current, {opacity: 1, transition: 1.4, filter: "blur(0px)", scale: 1, ease: Expo.easeIn,delay: 1});
+		
+		
+		const timelineColorText = new gsap.timeline({repeat:true})
+		
+		
+		timelineColorText.to(textRefIntro.current, {color: "greenyellow", duration:3,delay:3}, ">-1");
+		timelineColorText.to(textRefIntro.current, {color: "blue", duration:3},">-1");
+		timelineColorText.to(textRefIntro.current, {color: "red", duration:3},">-1");
+		timelineColorText.to(textRefIntro.current, {color: "#0E87D0", duration:3},">-1");
+		
+		
 	});
 	
 	
 	return (<section data-scroll data-scroll-section className={"home-hero"}>
 			<div className={"home-hero-container"}>
-				<h2 data-scroll data-scroll-speed={"-2"} className={"text-200 regular color-primary"}>
-					<Tween playState={statePlay} from={{x: '-100px', opacity: "0", rotate: 20}} to={{x: '0', opacity: "100%", rotate: 0}} ease="expo.in()" duration={1.4} stagger={0.15}>
+				<h2 ref={textRefIntro} data-scroll data-scroll-speed={"-2"}   className={"text-200 regular color-primary"}>
+					<Tween playState={statePlay} from={{opacity: "0"}} to={{opacity: "100%"}} ease="expo.out()" duration={3} stagger={0.15}>
 						<SplitChars
-							wrapper={<span/>}
+							wrapper={<span style={{display:"inline-block"}}/>}
 						>
 							Okulus
 						</SplitChars>

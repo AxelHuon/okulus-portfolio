@@ -39,6 +39,7 @@
       z-index: 998;
       mix-blend-mode: difference;
       pointer-events: none;
+      filter: blur(20px);
     }
     &-background{
       position: absolute;
