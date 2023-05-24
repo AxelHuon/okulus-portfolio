@@ -387,7 +387,7 @@ html.has-scroll-dragging {
   width: 100vw;
   height: 400vh;
   position: relative;
-  margin-top: 150px;
+  padding-top: 150px;
 }
 .home-gallery-container {
   height: 100%;
