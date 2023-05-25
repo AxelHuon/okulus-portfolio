@@ -22,7 +22,7 @@ const Router = () => {
         <Routes>
           <Route path="/" element={<Home />} />
         </Routes>
-        <Footer />
+          <Footer />
       </div>
     </LocoScroll>
   );
