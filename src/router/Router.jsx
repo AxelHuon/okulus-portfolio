@@ -12,7 +12,7 @@ const Router = () => {
 	
 	return (
 		<LocoScroll innerRef={ref} direction="vertical">
-			<div data-scroll data-scroll-container ref={ref}>
+			<div className={"smooth-scroll"}  data-scroll data-scroll-container ref={ref}>
 				<Header />
 				<Routes>
 					<Route path="/" element={<Home  />} />

@@ -1,0 +1,32 @@
+.home-forever-vacation{
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  &-container{
+    background: url("/images/background-forever.png");
+    background-size: cover;
+    background-position: center;
+    transition-timing-function: ease-in;
+    position: relative;
+    &-content{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-block: 2em;
+      height: 100%;
+      z-index: 99999;
+      position: relative;
+      a{
+        margin-top: 20px;
+      }
+      img{
+        width: 15vw;
+        filter: invert(100%);
+      }
+    }
+  }
+}

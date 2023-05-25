@@ -1,0 +1,13 @@
+.button-custom{
+  padding: 1em;
+  color: $green;
+  font-size: 20px;
+  background: $black;
+  line-height: 20px;
+  border: 1px solid $black;
+  transition: border 0.3s ease-in-out,background 0.3s ease-in-out;
+  &:hover{
+    background: transparent;
+    border: 1px solid $green;
+  }
+}
