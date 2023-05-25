@@ -42,16 +42,10 @@ const HomeHero = () => {
 	});
 	
 	
-	const handleShake = () =>{
-		const timeline = new gsap.timeline()
-		timeline.to(persoRef.current, {x:10,duration:0.2});
-	}
-	
-	
 	return (<section id={"hero"} data-scroll data-scroll-section className={"home-hero"}>
 			<div className={"home-hero-container"}>
 				<div data-scroll data-scroll-speed={"-2"} className={"home-hero-container-perso"}>
-					<img onClick={(e)=>handleShake()} ref={persoRef} src={"/images/perso.png"}/>
+					<img ref={persoRef} src={"/images/perso.png"}/>
 				</div>
 				<div data-scroll data-scroll-direction={"horizontal"} data-scroll-speed={"2"} className={"home-hero-container-portfolio"}>
 					<p className={"text-30 regular color-primary"}>portfolio <span style={{fontStyle:"italic", fontSize:"45px"}}>2023</span></p>

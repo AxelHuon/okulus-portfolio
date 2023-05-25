@@ -56,6 +56,11 @@ a {
   text-decoration: none;
 }
 
+html::selection {
+  color: red;
+  background: yellow;
+}
+
 @font-face {
   font-family: "BrownSugar";
   src: url("../fonts/BrownSugar.ttf") format("truetype");
@@ -240,7 +245,7 @@ html.has-scroll-dragging {
   position: absolute;
   top: 0;
   right: 0;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   opacity: 0.5;
   width: 7px;
   border-radius: 10px;
@@ -257,6 +262,20 @@ html.has-scroll-dragging {
 [data-scroll-direction=horizontal] .c-scrollbar_thumb {
   right: auto;
   bottom: 0;
+}
+
+.button-custom {
+  padding: 1em;
+  color: #ADFF2F;
+  font-size: 20px;
+  background: #1C1C1C;
+  line-height: 20px;
+  border: 1px solid #1C1C1C;
+  transition: border 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+.button-custom:hover {
+  background: transparent;
+  border: 1px solid #ADFF2F;
 }
 
 .header {
@@ -693,12 +712,38 @@ html.has-scroll-dragging {
 .home-about-container-text {
   width: 40%;
 }
-.home-about-container-text h3 span.hoverable {
-  transition: transform 0.6s cubic-bezier(0.85, 0, 0.2, 1);
+
+.home-forever-vacation {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
-.home-about-container-text h3 span.hoverable:hover {
-  cursor: default;
-  transform: translateY(-100px) !important;
+.home-forever-vacation-container {
+  background: url("/images/background-forever.png");
+  background-size: cover;
+  background-position: center;
+  transition-timing-function: ease-in;
+  position: relative;
+}
+.home-forever-vacation-container-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-block: 2em;
+  height: 100%;
+  z-index: 99999;
+  position: relative;
+}
+.home-forever-vacation-container-content a {
+  margin-top: 20px;
+}
+.home-forever-vacation-container-content img {
+  width: 15vw;
+  filter: invert(100%);
 }
 
 .home-contact {
@@ -706,10 +751,8 @@ html.has-scroll-dragging {
   width: 100vw;
   position: relative;
   display: flex;
-  align-items: center;
   justify-content: center;
   overflow: hidden;
-  padding-top: 150px;
 }
 .home-contact-container {
   width: 100%;

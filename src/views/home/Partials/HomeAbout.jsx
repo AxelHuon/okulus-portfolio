@@ -67,7 +67,7 @@ const HomeAbout = () => {
 	
 	
 	
-	return (<section id={"about"} data-scroll data-scroll-section data-scroll-offset={"300"} className={"home-about"}>
+	return (<section id={"about"} data-scroll data-scroll-section data-scroll-offset={"500"} className={"home-about"}>
 			<div onClick={(e)=>dragDrop("instagram")} className={"home-about-social-item instagram"}>
 				<img src={"images/instagram.svg"}/>
 				<p className={"color-green text-30 regular"}>@balcokulus</p>
@@ -78,18 +78,20 @@ const HomeAbout = () => {
 		</div>
 		<div className={"home-about-container"}>
 			<div className={"home-about-container-text"}>
-				<h3 data-scroll data-scroll-speed={"2"} data-scroll-offset={"200"} data-scroll-direction={"horizontal"}
+				<h3 data-scroll data-scroll-speed={"-2"} data-scroll-offset={"200"} data-scroll-direction={"horizontal"}
 					className={"color-white regular text-120"}>
-					<Tween playState={playState} from={{y: '100px', opacity: "0", rotate: 20}}
-						   to={{y: '0', opacity: "100%", rotate: 0}}
-						   ease="expo.out()"
-						   duration={3} stagger={0.15}>
-						<SplitChars
-							wrapper={<span style={{display: 'inline-block'}}/>}
-						>
-							About
-						</SplitChars>
-					</Tween>
+					<Reveal repeat>
+						<Tween from={{y: '100px', opacity: "0", rotate: 20}}
+							   to={{y: '0', opacity: "100%", rotate: 0}}
+							   ease="expo.out()"
+							   duration={3} stagger={0.15}>
+							<SplitChars
+								wrapper={<span style={{ display: 'inline-block', }} />}
+							>
+								About
+							</SplitChars>
+						</Tween>
+					</Reveal>
 				</h3>
 				<Reveal repeat>
 					<Tween from={{opacity: 0}} to={{opacity: 1}} duration={2}>

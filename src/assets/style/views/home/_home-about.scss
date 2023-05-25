@@ -122,18 +122,6 @@
     &-text {
       width: 40%;
 
-      h3 {
-        span {
-          &.hoverable {
-            transition: transform 0.6s cubic-bezier(0.85, 0, 0.2, 1);
-
-            &:hover {
-              cursor: default;
-              transform: translateY(-100px) !important;
-            }
-          }
-        }
-      }
     }
 
   }
