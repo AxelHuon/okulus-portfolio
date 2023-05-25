@@ -1,6 +1,6 @@
 .home-gallery {
   width: 100vw;
-  height: 400vh;
+  height: 300vh;
   position: relative;
   padding-top: 150px;
   &-container {
@@ -11,11 +11,9 @@
     flex-direction: column;
     position: relative;
     text-align: center;
-
     h2 {
       pointer-events: none;
     }
-
     &-images {
       margin-top: 120px;
       position: relative;

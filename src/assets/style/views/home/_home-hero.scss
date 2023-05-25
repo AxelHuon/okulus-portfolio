@@ -22,13 +22,14 @@
     padding-inline: 5%;
     box-sizing: border-box;
     &-perso{
-      img{
         position: absolute;
         left: 0;
         top: -60px;
+      img{
         width: 600px;
         opacity: 0  ;
         filter: blur(20px);
+        z-index: 9999999999;
       }
     }
     .image-tab{
@@ -43,11 +44,14 @@
         max-width: 400px;
       }
     }
-    h2{
+    &-text{
       position: absolute;
-      top: 15vh;
+      top: 10vh;
       z-index: 998;
       mix-blend-mode: difference;
+
+    }
+    h2{
       pointer-events: none;
       filter: blur(20px);
     }
