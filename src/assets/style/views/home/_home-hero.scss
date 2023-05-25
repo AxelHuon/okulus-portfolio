@@ -21,6 +21,11 @@
     position: relative;
     padding-inline: 5%;
     box-sizing: border-box;
+    &-portfolio{
+      position: absolute;
+      right:35%;
+      bottom: 10%;
+    }
     &-perso{
         position: absolute;
         left: 0;
