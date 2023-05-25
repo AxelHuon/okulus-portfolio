@@ -334,6 +334,11 @@ html.has-scroll-dragging {
   padding-inline: 5%;
   box-sizing: border-box;
 }
+.home-hero-container-portfolio {
+  position: absolute;
+  right: 35%;
+  bottom: 10%;
+}
 .home-hero-container-perso {
   position: absolute;
   left: 0;

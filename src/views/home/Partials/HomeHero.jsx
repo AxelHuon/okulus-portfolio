@@ -53,6 +53,9 @@ const HomeHero = () => {
 				<div data-scroll data-scroll-speed={"-2"} className={"home-hero-container-perso"}>
 					<img onClick={(e)=>handleShake()} ref={persoRef} src={"/images/perso.png"}/>
 				</div>
+				<div data-scroll data-scroll-direction={"horizontal"} data-scroll-speed={"2"} className={"home-hero-container-portfolio"}>
+					<p className={"text-30 regular color-primary"}>portfolio <span style={{fontStyle:"italic", fontSize:"45px"}}>2023</span></p>
+				</div>
 				<div data-scroll data-scroll-speed={"-2"} className={"home-hero-container-text"}>
 				<h2 ref={textRefIntro}  className={"text-200 regular color-primary"}>
 					<Tween playState={statePlay} from={{opacity: "0"}} to={{opacity: "100%"}} ease="expo.out()" duration={3} stagger={0.15}>
