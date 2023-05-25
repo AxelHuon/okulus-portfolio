@@ -340,7 +340,7 @@ html.has-scroll-dragging {
   top: -60px;
 }
 .home-hero-container-perso img {
-  width: 600px;
+  width: 30vw;
   opacity: 0;
   filter: blur(20px);
   z-index: 9999999999;
