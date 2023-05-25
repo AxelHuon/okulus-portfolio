@@ -21,7 +21,17 @@
     position: relative;
     padding-inline: 5%;
     box-sizing: border-box;
-    img{
+    &-perso{
+      img{
+        position: absolute;
+        left: 0;
+        top: -60px;
+        width: 600px;
+        opacity: 0  ;
+        filter: blur(20px);
+      }
+    }
+    .image-tab{
       width: 500px;
       max-width: 500px;
       z-index: 998;

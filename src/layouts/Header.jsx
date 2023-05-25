@@ -11,7 +11,7 @@ const Header = () => {
 	return (
 		<header className={"header"}>
 			<aside className={"header-container"}>
-				<div className={"header-container-logo"}><p onClick={(e)=>handleScroll("#home")} className={"color-secondary-gradient regular text-30"}>OKULUS</p></div>
+				<div className={"header-container-logo"}><p onClick={(e)=>handleScroll("#hero")} className={"color-secondary-gradient regular text-30"}>OKULUS</p></div>
 				<ul className={"header-container-menu"}>
 					<li onClick={(e)=>handleScroll("#about")}><p className={"color-secondary-gradient regular text-16"}>About</p></li>
 					<li onClick={(e)=>handleScroll("#gallery")}><p className={"color-secondary-gradient regular text-16"}>Gallery</p></li>

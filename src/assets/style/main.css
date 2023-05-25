@@ -334,7 +334,15 @@ html.has-scroll-dragging {
   padding-inline: 5%;
   box-sizing: border-box;
 }
-.home-hero-container img {
+.home-hero-container-perso img {
+  position: absolute;
+  left: 0;
+  top: -60px;
+  width: 600px;
+  opacity: 0;
+  filter: blur(20px);
+}
+.home-hero-container .image-tab {
   width: 500px;
   max-width: 500px;
   z-index: 998;
@@ -344,7 +352,7 @@ html.has-scroll-dragging {
   opacity: 0;
 }
 @media (max-width: 991px) {
-  .home-hero-container img {
+  .home-hero-container .image-tab {
     max-width: 400px;
   }
 }
